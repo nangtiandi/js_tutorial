@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Labrada:ital,wght@1,500&family=Poppins:wght@300&display=swap');
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Labrada', serif;
+   font-family: 'Poppins', sans-serif;
+}
+body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+}
+section{
+   background-color: black;
+   color: aliceblue;
+   width: 500px;
+   height: 500px;
+   padding: 20px 20px 0 20px;
+   border-radius: 10px;
+   position: relative;
+   box-shadow: 0 3px 2px 2px rgba(0,0,0,0.2);
+}
+section .score{
+   display: flex;
+   justify-content: space-around;
+   /* align-items: center; */
+}
+section .score h2{
+   font-size: 25px;
+}
+section .score p{
+   font-size: 24px;
+   background: #fc449a;
+   width: 45px;
+   height: 45px;
+   line-height: 45px;
+   text-align: center;
+   margin: 10px auto;
+   border-radius: 50%;
+}
+section .intro{
+   display: flex;
+   justify-content: space-around;
+   flex-direction: column;
+   align-items: center;
+   transition: all .5s ease;
+   /* display: none; */
+}
+section .intro h1{
+   font-size: 30px;   
+   line-height: 14rem;
+}
+section .intro button{
+   width: 30%;
+   height: 50px;
+   font-size: 26px;
+   font-weight: bold;
+   background-color: #fc449a;
+   color: #fff;
+   border-radius: 10px;
+   cursor: pointer;
+   transition: all .3s ease;
+}
+section .intro button:hover{
+   color: #000;
+   background-color: #fff;
+}
+section .match{
+   position: absolute;
+   top: 55%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   /* display: none; */
+}
+div.unactive{
+   opacity: 0;
+   pointer-events: none;
+}
+div.active{
+   opacity: 1;
+   pointer-events: auto;
+}
+section .match .winner{
+   position: absolute;
+   top: 10%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+   width: 100%;
+}
+section .hands img{
+   width: 150px;
+   margin: 20% 0 10px 0;
+}
+.hands, .options{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+.player-hand{
+   transform: rotateY(180deg);
+}
+.match .options button{
+   width: 120px;
+   height: 40px;
+   margin: 5px ;
+   font-size: 23px;
+   background-color: #fc449a;
+   color: aliceblue;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: all .2s ease;
+}
+.match .options button:hover{
+   color: #000;
+   background-color: #fff;
+}
+@keyframes shakePlayer {
+   0%{
+      transform: rotateY(180deg) translateY(0px);
+   }
+   15%{
+      transform: rotateY(180deg) translateY(-50px);
+   }
+   25%{
+      transform: rotateY(180deg) translateY(0px);
+   }
+   35%{
+      transform: rotateY(180deg) translateY(-50px);
+   }
+   50%{
+      transform: rotateY(180deg) translateY(0px);
+   }
+   65%{
+      transform: rotateY(180deg) translateY(-50px);
+   }
+   75%{
+      transform: rotateY(180deg) translateY(0px);
+   }
+   85%{
+      transform: rotateY(180deg) translateY(-50px);
+   }
+   100%{
+      transform: rotateY(180deg) translateY(0px);
+   }
+}
+@keyframes shakeComputer {
+   0%{
+      transform: translateY(0px);
+   }
+   15%{
+      transform: translateY(-50px);
+   }
+   25%{
+      transform: translateY(0px);
+   }
+   35%{
+      transform: translateY(-50px);
+   }
+   50%{
+      transform: translateY(0px);
+   }
+   65%{
+      transform: translateY(-50px);
+   }
+   75%{
+      transform: translateY(0px);
+   }
+   85%{
+      transform: translateY(-50px);
+   }
+   100%{
+      transform: translateY(0px);
+   }
+}
