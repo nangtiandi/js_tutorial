@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Labrada:ital,wght@1,500&family=Playfair+Display:wght@500&family=Poppins:wght@300&display=swap');
+:root{
+   --dark-light : #1b191c;
+   --dark-blue: #041024;
+   --red-dark: #540117;
+   --light : #fff;
+   --red : #a60a0a;
+}
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Labrada', serif;
+   font-family: 'Playfair Display', serif;
+   font-family: 'Poppins', sans-serif;
+}
+body{
+   background-color: var(--dark-blue);
+   color: var(--light);
+}
+.watch{
+   width: 400px;
+   background: var(--dark-light);
+   text-align: center;
+   padding: 20px 5px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   border-radius: 5px;
+}
+.time{
+   font-size: 4.5rem;
+   margin-bottom: 10px;
+}
+.controls{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.controls button{
+   padding: 0 10px;
+   font-size: 20px;
+   margin: 0 10px;
+   outline: none;
+   border: none;
+   user-select: none;
+   cursor: pointer;
+   border-radius: 5px;
+   background-color: var(--red);
+   color: var(--light);
+   transition: all .3s ease;
+}
+.controls button:hover{
+   background-color: #540117;
+}
+.controls button:active{
+   background-color: var(--dark-blue);
+}
